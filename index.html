@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
 </head>
 
 <body>
     <div class="main">
-        <div class="container">
+        <div class="container" hidden>
             <div class="row">
                 <div class="col-md-12">
                     <div class="title_medium">
@@ -24,7 +25,7 @@
             <!-- row 1 qualifier -->
             <div class="row qualifier">
                 <div class="col-md-3">
-                    <div class="card_back" id="qc1" >
+                    <div class="card_back" id="qc1">
                         <div class="col-sm-3">
                             <img src="./img/RealM.png" alt="Real">
                         </div>
@@ -278,7 +279,7 @@
             <div class="row final">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <div class="card_back"id="fc1">
+                    <div class="card_back" id="fc1">
                         <div class="col-sm-3">
                             <img src="./img/RealM.png" alt="Real">
                         </div>
@@ -295,6 +296,28 @@
                 <div class="col-md-3"></div>
             </div>
         </div>
+        <div class="container">
+            <div class="table1">
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 
@@ -309,23 +332,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
 
 
     <script>
+        //  control every card separetly, color change,input check  //
         function focus_out(id1, id2, id3) {
             if ($(id1).val() != '' && $(id2).val() != '') {
                 // console.log("#" + id3 + " .card_back");
-                if(id3.includes("qc"))
-                {
+                if (id3.includes("qc")) {
                     $("#" + id3 + ".card_back").css({ "background-color": "#31f7005e" });
                 }
-                else if(id3.includes("kc"))
-                {
+                else if (id3.includes("kc")) {
                     $("#" + id3 + ".card_back").css({ "background-color": "#e8f8065e" });
                 }
-                else
-                {
+                else {
                     $("#" + id3 + ".card_back").css({ "background-color": "#ff00005e" });
                 }
             }
@@ -334,6 +357,10 @@
                 console.log("f-else");
             }
         }
+        // initilize jqery data table //
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
     </script>
 
 </body>

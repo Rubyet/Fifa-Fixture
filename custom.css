@@ -128,3 +128,10 @@ h1:after {
 }
 
 /* //////////////////////////// */
+
+.table1{
+  padding: 20px 0;
+}
+.table1 table{
+  background:darkgoldenrod;
+}
