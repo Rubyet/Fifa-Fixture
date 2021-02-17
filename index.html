@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifa Fixture</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title_medium">
+                        <h1>Qualifier Round</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- row 1 qualifier -->
+            <div class="row qualifier">
+                <div class="col-md-3">
+                    <div class="card_back" id="qc1" >
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t1_1" onfocusout="focus_out(t1_1,t4_1,'qc1')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t4_1" onfocusout="focus_out(t1_1,t4_1,'qc1')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc2">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t1_2" onfocusout="focus_out(t1_2,t3_2,'qc2')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t3_2" onfocusout="focus_out(t1_2,t3_2,'qc2')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc3">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t1_3" onfocusout="focus_out(t1_3,t5_3,'qc3')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t5_3" onfocusout="focus_out(t1_3,t5_3,'qc3')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc4">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t1_4" onfocusout="focus_out(t1_4,t6_4,'qc4')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t6_4" onfocusout="focus_out(t1_4,t6_4,'qc4')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 2 qualifier -->
+            <div class="row qualifier">
+                <div class="col-md-3">
+                    <div class="card_back" id="qc5">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t3_1" onfocusout="focus_out(t3_1,t6_1,'qc5')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t6_1" onfocusout="focus_out(t3_1,t6_1,'qc5')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc6">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t4_2" onfocusout="focus_out(t4_2,t5_2,'qc6')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t5_2" onfocusout="focus_out(t4_2,t5_2,'qc6')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc7">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t6_3" onfocusout="focus_out(t6_3,t4_3,'qc7')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t4_3" onfocusout="focus_out(t6_3,t4_3,'qc7')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc8">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t5_4" onfocusout="focus_out(t5_4,t3_4,'qc8')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t3_4" onfocusout="focus_out(t5_4,t3_4,'qc8')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 3 qualifier -->
+            <div class="row qualifier">
+                <div class="col-md-3">
+                    <div class="card_back" id="qc9">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t5_1" onfocusout="focus_out(t5_1,t2_1,'qc9')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t2_1" onfocusout="focus_out(t5_1,t2_1,'qc9')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc10">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t6_2" onfocusout="focus_out(t6_2,t2_2,'qc10')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t2_2" onfocusout="focus_out(t6_2,t2_2,'qc10')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc11">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t3_3" onfocusout="focus_out(t3_3,t2_3,'qc11')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t2_3" onfocusout="focus_out(t3_3,t2_3,'qc11')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card_back" id="qc12">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="t4_4" onfocusout="focus_out(t4_4,t2_4,'qc12')">
+                            <span class="separator_small">-</span>
+                            <input type="number" name="T2" id="t2_4" onfocusout="focus_out(t4_4,t2_4,'qc12')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Knockout round -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title_medium">
+                        <h1>Knockout Round</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- row 1 knockout -->
+            <div class="row knockout">
+                <div class="col-md-4">
+                    <div class="card_back" id="kc1">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="kt1_1" onfocusout="focus_out(kt1_1,kt2_1,'kc1')">
+                            <span class="separator_medium">-</span>
+                            <input type="number" name="T2" id="kt2_1" onfocusout="focus_out(kt1_1,kt2_1,'kc1')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card_back" id="kc2">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="kt2_2" onfocusout="focus_out(kt2_2,kt3_1,'kc2')">
+                            <span class="separator_medium">-</span>
+                            <input type="number" name="T2" id="kt3_1" onfocusout="focus_out(kt2_2,kt3_1,'kc2')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card_back" id="kc3">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T1" id="kt3_2" onfocusout="focus_out(kt3_2,kt1_2,'kc3')">
+                            <span class="separator_medium">-</span>
+                            <input type="number" name="T2" id="kt1_2" onfocusout="focus_out(kt3_2,kt1_2,'kc3')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Knocout round -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title_medium">
+                        <h1>Final</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- row 1 final -->
+            <div class="row final">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card_back"id="fc1">
+                        <div class="col-sm-3">
+                            <img src="./img/RealM.png" alt="Real">
+                        </div>
+                        <div class="col-sm-6 input">
+                            <input type="number" name="T11" id="f1" onfocusout="focus_out(f1,f2,'fc1')">
+                            <span class="separator_large">-</span>
+                            <input type="number" name="T2" id="f2" onfocusout="focus_out(f1,f2,'fc1')">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./img/Barca.png" alt="Barca">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+        function focus_out(id1, id2, id3) {
+            if ($(id1).val() != '' && $(id2).val() != '') {
+                // console.log("#" + id3 + " .card_back");
+                if(id3.includes("qc"))
+                {
+                    $("#" + id3 + ".card_back").css({ "background-color": "#31f7005e" });
+                }
+                else if(id3.includes("kc"))
+                {
+                    $("#" + id3 + ".card_back").css({ "background-color": "#e8f8065e" });
+                }
+                else
+                {
+                    $("#" + id3 + ".card_back").css({ "background-color": "#ff00005e" });
+                }
+            }
+            else {
+                $("#" + id3 + ".card_back").css({ "background-color": "#0a14225e" });
+                console.log("f-else");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

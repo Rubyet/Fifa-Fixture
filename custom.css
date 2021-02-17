@@ -1,0 +1,130 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/Background/Football-Stadium-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+*:focus {
+  outline: none;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.title_medium {
+  margin-top: 30pt;
+  text-align: center;
+}
+.col-sm-3 img,
+.col-sm-6 input {
+  width: 100%;
+}
+.input,
+.card_back {
+  display: inline-flex;
+}
+.col-sm-3 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.card_back {
+  background-color: #0a14225e;
+  padding: 10px;
+  margin: 10px 10px;
+  box-shadow: 0 0 10px #000000;
+  border-radius: 10px;
+}
+/* .card_back:hover {
+  background-color: #31f7005e;
+}
+.knockout .card_back:hover {
+  background-color: #e8f8065e;
+}
+.final .card_back:hover {
+  background-color: #ff00005e;
+} */
+.col-sm-6 .separator_small {
+  font-size: 34px;
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+.separator_medium {
+  font-size: 45px;
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+.separator_large {
+  font-size: 75px;
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+.col-sm-6 input {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 17pt;
+  box-shadow: none !important;
+  text-shadow: 1px 1px #000;
+  line-height: 17pt;
+}
+.knockout .col-sm-6 input {
+  font-size: 30pt;
+}
+.final .col-sm-6 input {
+  font-size: 60pt;
+}
+
+h1 {
+  text-shadow: 2px 2px #2724a1cb;
+  position: relative;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 300px;
+  /* width:100%; */
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 13px;
+}
+h1:before {
+  background-color: #fdf908;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 5px;
+}
+h1:after {
+  background-color: #2eff13;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 0.25em;
+}
+
+/* //////////////////////////// */
