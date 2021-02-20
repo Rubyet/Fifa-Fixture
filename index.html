@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fifa Fixture</title>
@@ -10,10 +10,92 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="autocomplete.js"></script>
 </head>
 
 <body>
     <div id="loader"></div>
+    <div class="container main_item" id="page0">
+        <div class="col-md-12">
+            <div class="nine">
+                <h1>Fifa Scheduler<span>Tournament For Friends</span></h1>
+            </div>
+            <div class="big_image">
+                <img src="../img/Background/main.png" alt="main">
+            </div>
+            <div class="sub_title" id="player_number">
+                <h3>Number of players</h3>
+                <div class="input">
+                    <input required id="in1" type="number">
+                </div>
+                <div><a href="#" class="myButton" id="player_number_btn">Next</a></div>
+            </div>
+            <div class="sub_title" id="team_number">
+                <h3>Number of Teams</h3>
+                <div class="input">
+                    <input required id="in2" type="number">
+                </div>
+                <div><a href="#" class="myButton" id="team_number_btn">Next</a></div>
+            </div>
+            <div class="sub_title" id="player_name">
+                <h3>Enter Player Names</h3>
+                <div id="player_input">
+                    <div class="col-sm-4">
+                        <input required id="in3" type="text" placeholder="Player 1">
+                    </div>
+                    <div class="col-sm-4">
+                        <input required id="in4" type="text" placeholder="Player 2">
+                    </div>
+                    <div class="col-sm-4">
+                        <input required id="in5" type="text" placeholder="Player 3">
+                    </div>
+                </div>
+
+                <div><a href="#" class="myButton" id="player_name_btn">Next</a></div>
+            </div>
+            <div class="sub_title" id="team_name">
+                <h3>Number Team Name</h3>
+                <div id="team_input">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input required id="in6" type="text" placeholder="Team 1-1">
+                        </div>
+                        <div class="col-sm-4">
+                            <input required id="in7" type="text" placeholder="Team 2-1">
+                        </div>
+                        <div class="col-sm-4">
+                            <input required id="in8" type="text" placeholder="Team 3-1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input required id="in9" type="text" placeholder="Team 1-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <input required id="in10" type="text" placeholder="Team 2-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <input required id="in11" type="text" placeholder="Team 3-2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">                          
+                        </div>
+                        <div class="col-sm-4">
+                            <input id="in12" type="radio"><span class="random">Random?</span>
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                </div>
+                <div><a href="#" class="myButton" id="team_name_btn">Next</a></div>
+            </div>
+        </div>
+    </div>
     <div class="main all">
         <div class="container" id="page1">
             <div class="row">
@@ -28,8 +110,8 @@
                 <div class="col-md-3">
                     <div class="card_back" id="qc1">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_1_1">
+                            <span class="name1" id="tpn_1_1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t1_1" onfocusout="focus_out(t1_1,t4_1,'qc1')">
@@ -37,16 +119,16 @@
                             <input type="number" name="T2" id="t4_1" onfocusout="focus_out(t1_1,t4_1,'qc1')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_4_1">
+                            <span class="name1" id="tpn_2_6">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc2">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_1_2">
+                            <span class="name1" id="tpn_1_2">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t1_2" onfocusout="focus_out(t1_2,t3_2,'qc2')">
@@ -54,16 +136,16 @@
                             <input type="number" name="T2" id="t3_2" onfocusout="focus_out(t1_2,t3_2,'qc2')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_3_2">
+                            <span class="name1" id="tpn_2_1">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc3">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_1_3">
+                            <span class="name1" id="tpn_1_3">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t1_3" onfocusout="focus_out(t1_3,t5_3,'qc3')">
@@ -71,16 +153,16 @@
                             <input type="number" name="T2" id="t5_3" onfocusout="focus_out(t1_3,t5_3,'qc3')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_5_3">
+                            <span class="name1" id="tpn_3_2">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc4">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_1_4">
+                            <span class="name1" id="tpn_1_4">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t1_4" onfocusout="focus_out(t1_4,t6_4,'qc4')">
@@ -88,8 +170,8 @@
                             <input type="number" name="T2" id="t6_4" onfocusout="focus_out(t1_4,t6_4,'qc4')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_6_4">
+                            <span class="name1" id="tpn_3_5">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
@@ -99,8 +181,8 @@
                 <div class="col-md-3">
                     <div class="card_back" id="qc5">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_3_1">
+                            <span class="name1" id="tpn_2_2">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t3_1" onfocusout="focus_out(t3_1,t6_1,'qc5')">
@@ -108,16 +190,16 @@
                             <input type="number" name="T2" id="t6_1" onfocusout="focus_out(t3_1,t6_1,'qc5')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_6_1">
+                            <span class="name1" id="tpn_3_6">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc6">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_4_2">
+                            <span class="name1" id="tpn_2_7">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t4_2" onfocusout="focus_out(t4_2,t5_2,'qc6')">
@@ -125,16 +207,16 @@
                             <input type="number" name="T2" id="t5_2" onfocusout="focus_out(t4_2,t5_2,'qc6')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_5_2">
+                            <span class="name1" id="tpn_3_3">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc7">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_6_3">
+                            <span class="name1" id="tpn_3_7">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t6_3" onfocusout="focus_out(t6_3,t4_3,'qc7')">
@@ -142,16 +224,16 @@
                             <input type="number" name="T2" id="t4_3" onfocusout="focus_out(t6_3,t4_3,'qc7')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_4_3">
+                            <span class="name1" id="tpn_2_8">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc8">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_5_4">
+                            <span class="name1" id="tpn_3_4">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t5_4" onfocusout="focus_out(t5_4,t3_4,'qc8')">
@@ -159,8 +241,8 @@
                             <input type="number" name="T2" id="t3_4" onfocusout="focus_out(t5_4,t3_4,'qc8')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_3_4">
+                            <span class="name1" id="tpn_2_3">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
@@ -170,8 +252,8 @@
                 <div class="col-md-3">
                     <div class="card_back" id="qc9">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_5_1">
+                            <span class="name1" id="tpn_3_1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t5_1" onfocusout="focus_out(t5_1,t2_1,'qc9')">
@@ -179,16 +261,16 @@
                             <input type="number" name="T2" id="t2_1" onfocusout="focus_out(t5_1,t2_1,'qc9')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_2_1">
+                            <span class="name1" id="tpn_1_5">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc10">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_6_2">
+                            <span class="name1" id="tpn_3_8">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t6_2" onfocusout="focus_out(t6_2,t2_2,'qc10')">
@@ -196,16 +278,16 @@
                             <input type="number" name="T2" id="t2_2" onfocusout="focus_out(t6_2,t2_2,'qc10')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_2_2">
+                            <span class="name1" id="tpn_1_6">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc11">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_3_3">
+                            <span class="name1" id="tpn_2_4">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t3_3" onfocusout="focus_out(t3_3,t2_3,'qc11')">
@@ -213,16 +295,16 @@
                             <input type="number" name="T2" id="t2_3" onfocusout="focus_out(t3_3,t2_3,'qc11')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_2_3">
+                            <span class="name1" id="tpn_1_7">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card_back" id="qc12">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Real" id="tp_4_4">
+                            <span class="name1" id="tpn_2_5">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
                             <input type="number" name="T1" id="t4_4" onfocusout="focus_out(t4_4,t2_4,'qc12')">
@@ -230,8 +312,8 @@
                             <input type="number" name="T2" id="t2_4" onfocusout="focus_out(t4_4,t2_4,'qc12')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
-                            <span class="name1">Nasdfsme</span>
+                            <img src="./img/no_team.gif" alt="Barca" id="tp_2_4">
+                            <span class="name1" id="tpn_1_8">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
@@ -249,7 +331,7 @@
                 <div class="col-md-4">
                     <div class="card_back" id="kc1">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
+                            <img src="./img/no_team.gif" alt="Real">
                             <span class="name1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
@@ -258,7 +340,7 @@
                             <input type="number" name="T2" id="kt2_1" onfocusout="focus_out(kt1_1,kt2_1,'kc1')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
+                            <img src="./img/no_team.gif" alt="Barca">
                             <span class="name1">Nasdfsme</span>
                         </div>
                     </div>
@@ -266,7 +348,7 @@
                 <div class="col-md-4">
                     <div class="card_back" id="kc2">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
+                            <img src="./img/no_team.gif" alt="Real">
                             <span class="name1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
@@ -275,7 +357,7 @@
                             <input type="number" name="T2" id="kt3_1" onfocusout="focus_out(kt2_2,kt3_1,'kc2')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
+                            <img src="./img/no_team.gif" alt="Barca">
                             <span class="name1">Nasdfsme</span>
                         </div>
                     </div>
@@ -283,7 +365,7 @@
                 <div class="col-md-4">
                     <div class="card_back" id="kc3">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
+                            <img src="./img/no_team.gif" alt="Real">
                             <span class="name1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
@@ -292,7 +374,7 @@
                             <input type="number" name="T2" id="kt1_2" onfocusout="focus_out(kt3_2,kt1_2,'kc3')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
+                            <img src="./img/no_team.gif" alt="Barca">
                             <span class="name1">Nasdfsme</span>
                         </div>
                     </div>
@@ -312,7 +394,7 @@
                 <div class="col-md-6">
                     <div class="card_back" id="fc1">
                         <div class="col-sm-3 img">
-                            <img src="./img/RealM.png" alt="Real">
+                            <img src="./img/no_team.gif" alt="Real">
                             <span class="name1">Nasdfsme</span>
                         </div>
                         <div class="col-sm-6 input">
@@ -321,12 +403,12 @@
                             <input type="number" name="T2" id="f2" onfocusout="focus_out(f1,f2,'fc1')">
                         </div>
                         <div class="col-sm-3 img">
-                            <img src="./img/Barca.png" alt="Barca">
+                            <img src="./img/no_team.gif" alt="Barca">
                             <span class="name1">Nasdfsme</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-3"><a href="#" class="myButton" id="score_table_btn">Score Table</a></div>
             </div>
         </div>
 
@@ -354,76 +436,77 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt1">3</td>
+                            <td id="plt1">0</td>
+                            <td id="wt1">0</td>
+                            <td id="dt1">0</td>
+                            <td id="lt1">0</td>
+                            <td id="st1">0</td>
+                            <td id="at1">0</td>
+                            <td id="dift1">0</td>
+                            <td id="pot1">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt2">3</td>
+                            <td id="plt2">0</td>
+                            <td id="wt2">0</td>
+                            <td id="dt2">0</td>
+                            <td id="lt2">0</td>
+                            <td id="st2">0</td>
+                            <td id="at2">0</td>
+                            <td id="dift2">0</td>
+                            <td id="pot2">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt3">3</td>
+                            <td id="plt3">0</td>
+                            <td id="wt3">0</td>
+                            <td id="dt3">0</td>
+                            <td id="lt3">0</td>
+                            <td id="st3">0</td>
+                            <td id="at3">0</td>
+                            <td id="dift3">0</td>
+                            <td id="pot3">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt4">3</td>
+                            <td id="plt4">0</td>
+                            <td id="wt4">0</td>
+                            <td id="dt4">0</td>
+                            <td id="lt4">0</td>
+                            <td id="st4">0</td>
+                            <td id="at4">0</td>
+                            <td id="dift4">0</td>
+                            <td id="pot4">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt5">3</td>
+                            <td id="plt5">0</td>
+                            <td id="wt5">0</td>
+                            <td id="dt5">0</td>
+                            <td id="lt5">0</td>
+                            <td id="st5">0</td>
+                            <td id="at5">0</td>
+                            <td id="dift5">0</td>
+                            <td id="pot5">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="pt6">3</td>
+                            <td id="plt6">0</td>
+                            <td id="wt6">0</td>
+                            <td id="dt6">0</td>
+                            <td id="lt6">0</td>
+                            <td id="st6">0</td>
+                            <td id="at6">0</td>
+                            <td id="dift6">0</td>
+                            <td id="pot6">0</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
         </div>
-        <div class="container" id="page2">
+        <div class="container" id="page3">
             <!--  table 2 -->
             <div class="main">
                 <h1 class="main-heading">
@@ -447,51 +530,49 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="p1">3</td>
+                            <td id="pl1">0</td>
+                            <td id="w1">0</td>
+                            <td id="d1">0</td>
+                            <td id="l1">0</td>
+                            <td id="s1">0</td>
+                            <td id="a1">0</td>
+                            <td id="dif1">0</td>
+                            <td id="po1">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="p2">3</td>
+                            <td id="pl2">0</td>
+                            <td id="w2">0</td>
+                            <td id="d2">0</td>
+                            <td id="l2">0</td>
+                            <td id="s2">0</td>
+                            <td id="a2">0</td>
+                            <td id="dif2">0</td>
+                            <td id="po2">0</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td id="p3">3</td>
+                            <td id="pl3">0</td>
+                            <td id="w3">0</td>
+                            <td id="d3">0</td>
+                            <td id="l3">0</td>
+                            <td id="s3">0</td>
+                            <td id="a3">0</td>
+                            <td id="dif3">0</td>
+                            <td id="po3">0</td>
                         </tr>
                         
                     </tbody>
                 </table>
             </div>
+            <a href="#" class="myButton" id="fixture_table_btn">Score Table</a>
         </div>
     </div>
 
 
 
     <!-- JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -500,7 +581,7 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
-    
+
     <!-- custom JS -->
     <script src="custom.js"></script>
 

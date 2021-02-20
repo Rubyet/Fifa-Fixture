@@ -2,20 +2,18 @@
 body {
   width: 100%;
   height: 100%;
-  background-image: url("img/Background/Football-Stadium-background.jpg");
-  /* background-image: url("img/Background/bg2.png"); */
-  background-size: cover;
+  background-image: url("img/Background/bg3.jpg") ;
+  background-repeat: no-repeat;
+  background-size: center;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-/* #page1{
-  position: fixed;
-  top: 1%;
-  bottom: 5%;
-  left: 10%;
-  right: 10%;
-} */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -100,7 +98,7 @@ input[type="number"] {
   font-size: 60pt;
 }
 
-h1 {
+#page2 h1,#page3 h1 {
   text-shadow: 2px 2px #2724a1cb;
   position: relative;
   color: #fff;
@@ -115,7 +113,7 @@ h1 {
   white-space: nowrap;
   padding-bottom: 13px;
 }
-h1:before {
+#page2 h1:before,#page3 h1:before {
   background-color: #fdf908;
   content: "";
   display: block;
@@ -123,7 +121,7 @@ h1:before {
   width: 75px;
   margin-bottom: 5px;
 }
-h1:after {
+#page2 h1:after,#page3 h1:after {
   background-color: #2eff13;
   content: "";
   display: block;
@@ -151,6 +149,31 @@ h1:after {
   margin: auto;
   white-space: nowrap;
   padding-bottom: 13px;
+}
+
+.main_title{
+  -webkit-text-stroke: 4px rgba(3, 3, 3, 0.377); /* width and color */
+  text-shadow: 4px 4px 7px #271eb1;
+  color: rgb(168, 148, 255);
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  /* width:100%; */
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 13px;
+}
+.main_title::before,.main_title::after{
+  display: none;
+}
+
+.main_item{
+  text-align: center;
+}
+.main_item img{
+  max-width: 400px;
 }
 
 /* //////////////////////////// */
@@ -184,3 +207,87 @@ h1:after {
 	background: #333333 url('https://codemyui.com/wp-content/uploads/2019/11/Soccer-Ball-Hexagon-Pattern-Loader.gif') no-repeat center;
 	z-index: 999;
 }
+
+
+
+/*  main page button */
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+	background-color:#b8e356;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 7px #86ae47;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+	background-color:#a5cc52;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#player_input{
+  display: inline-flex;
+}
+.main_item input{
+  margin: 10px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#page3{
+  text-align: center;
+}
+
+.random{
+  padding: 10px;
+}
+
+#score_table_btn{
+  margin-top: 70px;
+  color: #6d6d6d;
+}
+#fixture_table_btn{
+  color: #6d6d6d;
+}
+h3{
+  text-shadow: 1px 1px 4px;
+}
+
+/* Style 9
+   ----------------------------- */
+   #page0 .nine h1 {
+    text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+    font-family:"Playfair Display", serif; font-weight:400;
+  }
+  #page0 .nine h1 span {
+    margin-top: 5px;
+      font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+      text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+  
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-template-rows: 27px 0;
+      grid-gap: 20px;
+      align-items: center;
+  }
+  
+  #page0 .nine h1 span:after,.nine h1 span:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      height: 5px;
+    background-color:#f8f8f8;
+  }
+  
