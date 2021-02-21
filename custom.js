@@ -18,11 +18,11 @@ var ppo=[0,1,2];
 
 function compare(first,second)
 {
-  if(first==second)
+  if($(first).val()==$(second).val())
   {
     return "draw";
   }
-  if(first<second)
+  if($(first).val()<$(second).val())
   {
     return second;
   }
@@ -61,17 +61,21 @@ function focus_out(id1, id2, id3) {
   if ($(id1).val() != "" && $(id2).val() != "") {
     if (id3.includes("qc")) {
       $("#" + id3 + ".card_back").css({ "background-color": "rgb(49 247 0 / 35%)" });
-
+      
       
     } else if (id3.includes("kc")) {
       $("#" + id3 + ".card_back").css({ "background-color": "rgb(232 248 6 / 35%)" });
     } else {
       $("#" + id3 + ".card_back").css({ "background-color": "rgb(255 0 0 / 35%)" });
 
-      compare()
+      console.log(compare(id1,id2));
     }
+    $(id1).prop( "disabled", true );
+    $(id2).prop( "disabled", true );
   } else {
-    $("#" + id3 + ".card_back").css({ "background-color": "rgb(10 20 34 / 35%)" });
+    $("#" + id3 + ".card_back").css({ "background-color": "rgb(10 20 34 / 35%)" });  
+    $(id1).prop( "disabled", false );
+    $(id2).prop( "disabled", false );
   }
 }
 function value_return(variable) {
@@ -254,37 +258,39 @@ $(document).ready(function () {
       $("#p2").text(player2);
       $("#p3").text(player3);
 
-      $("#pl1").text(p1pl);
-      $("#pl2").text(p2pl);
-      $("#pl3").text(p3pl);
+      for(i=1;i<=3;i++)
+      {
+        $("#pl"+i+"").text(ppl[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#w"+i+"").text(pw[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#d"+i+"").text(pd[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#l"+i+"").text(pl[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#s"+i+"").text(ps[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#a"+i+"").text(pa[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#dif"+i+"").text(pdif[i-1]);
+      }
+      for(i=1;i<=3;i++)
+      {
+        $("#po"+i+"").text(ppo[i-1]);
+      }
       
-      $("#w1").text(p1w);
-      $("#w2").text(p2w);
-      $("#w3").text(p3w);
-      
-      $("#d1").text(p1d);
-      $("#d2").text(p2d);
-      $("#d3").text(p3d);
-
-      $("#l1").text(p1l);
-      $("#l2").text(p2l);
-      $("#l3").text(p3l);
-
-      $("#s1").text(p1s);
-      $("#s2").text(p2s);
-      $("#s3").text(p3s);
-
-      $("#a1").text(p1a);
-      $("#a2").text(p2a);
-      $("#a3").text(p3a);
-
-      $("#dif1").text(p1dif);
-      $("#dif2").text(p2dif);
-      $("#dif3").text(p3dif);
-
-      $("#po1").text(p1po);
-      $("#po2").text(p2po);
-      $("#po3").text(p3po);
 //////////////////////////////////////
       $("#pt1").text(P1T1);
       $("#pt2").text(P1T2);
@@ -293,62 +299,40 @@ $(document).ready(function () {
       $("#pt5").text(P3T1);
       $("#pt6").text(P3T2);
 
-      $("#plt1").text(t1pl);
-      $("#plt2").text(t2pl);
-      $("#plt3").text(t3pl);
-      $("#plt4").text(t4pl);
-      $("#plt5").text(t5pl);
-      $("#plt6").text(t6pl);
-
-      $("#wt1").text(t1w);
-      $("#wt2").text(t2w);
-      $("#wt3").text(t3w);
-      $("#wt4").text(t4w);
-      $("#wt5").text(t5w);
-      $("#wt6").text(t6w);
-
-      $("#dt1").text(t1d);
-      $("#dt2").text(t2d);
-      $("#dt3").text(t3d);
-      $("#dt4").text(t4d);
-      $("#dt5").text(t5d);
-      $("#dt6").text(t6d);
-
-      $("#lt1").text(t1l);
-      $("#lt2").text(t2l);
-      $("#lt3").text(t3l);
-      $("#lt4").text(t4l);
-      $("#lt5").text(t5l);
-      $("#lt6").text(t6l);
-
-      $("#st1").text(t1s);
-      $("#st2").text(t2s);
-      $("#st3").text(t3s);
-      $("#st4").text(t4s);
-      $("#st5").text(t5s);
-      $("#st6").text(t6s);
-
-      $("#at1").text(t1a);
-      $("#at2").text(t2a);
-      $("#at3").text(t3a);
-      $("#at4").text(t4a);
-      $("#at5").text(t5a);
-      $("#at6").text(t6a);
-
-      $("#dift1").text(t1dif);
-      $("#dift2").text(t2dif);
-      $("#dift3").text(t3dif);
-      $("#dift4").text(t4dif);
-      $("#dift5").text(t5dif);
-      $("#dift6").text(t6dif);
-
-      $("#pot1").text(t1po);
-      $("#pot2").text(t2po);
-      $("#pot3").text(t3po);
-      $("#pot4").text(t4po);
-      $("#pot5").text(t5po);
-      $("#pot6").text(t6po);
-
+      for(i=1;i<=6;i++)
+      {
+        $("#plt"+i+"").text(tpl[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#wt"+i+"").text(tw[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#dt"+i+"").text(td[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#lt"+i+"").text(tl[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#st"+i+"").text(ts[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#at"+i+"").text(ta[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#dift"+i+"").text(tdif[i-1]);
+      }
+      for(i=1;i<=6;i++)
+      {
+        $("#pot"+i+"").text(tpo[i-1]);
+      }
+      
+///////////////////////
       for(i=1;i<=8;i++)
       {
         $("#tpn_1_"+i+"").text(player1);

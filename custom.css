@@ -98,7 +98,7 @@ input[type="number"] {
   font-size: 60pt;
 }
 
-#page2 h1,#page3 h1 {
+#page1 h1,#page2 h1,#page3 h1 {
   text-shadow: 2px 2px #2724a1cb;
   position: relative;
   color: #fff;
@@ -113,7 +113,7 @@ input[type="number"] {
   white-space: nowrap;
   padding-bottom: 13px;
 }
-#page2 h1:before,#page3 h1:before {
+#page1 h1:before,#page2 h1:before,#page3 h1:before {
   background-color: #fdf908;
   content: "";
   display: block;
@@ -121,7 +121,7 @@ input[type="number"] {
   width: 75px;
   margin-bottom: 5px;
 }
-#page2 h1:after,#page3 h1:after {
+#page1 h1:after,#page2 h1:after,#page3 h1:after {
   background-color: #2eff13;
   content: "";
   display: block;
@@ -289,5 +289,9 @@ h3{
       border-top: 1px solid #ccc;
       height: 5px;
     background-color:#f8f8f8;
+  }
+  .nine{
+    /* padding-top: 20px; */
+    margin-top: 20px;
   }
   
