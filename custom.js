@@ -1,15 +1,36 @@
-var t1pl=0;var t1w=0;var t1d=0;var t1l=0;var t1s=0;var t1a=0;var t1dif=0;var t1po=0;
-var t2pl=0;var t2w=0;var t2d=0;var t2l=0;var t2s=0;var t2a=0;var t2dif=0;var t2po=0;
-var t3pl=0;var t3w=0;var t3d=0;var t3l=0;var t3s=0;var t3a=0;var t3dif=0;var t3po=0;
-var t4pl=0;var t4w=0;var t4d=0;var t4l=0;var t4s=0;var t4a=0;var t4dif=0;var t4po=0;
-var t5pl=0;var t5w=0;var t5d=0;var t5l=0;var t5s=0;var t5a=0;var t5dif=0;var t5po=0;
-var t6pl=0;var t6w=0;var t6d=0;var t6l=0;var t6s=0;var t6a=0;var t6dif=0;var t6po=0;
+var tpl=[0,1,2,3,4,5];
+var tw=[0,1,2,3,4,5];
+var td=[0,1,2,3,4,5];
+var tl=[0,1,2,3,4,5];
+var ts=[0,1,2,3,4,5];
+var ta=[0,1,2,3,4,5];
+var tdif=[0,1,2,3,4,5];
+var tpo=[0,1,2,3,4,5];
 
-var p1pl=0;var p1w=0;var p1d=0;var p1l=0;var p1s=0;var p1a=0;var p1dif=0;var p1po=0;
-var p2pl=0;var p2w=0;var p2d=0;var p2l=0;var p2s=0;var p2a=0;var p2dif=0;var p2po=0;
-var p3pl=0;var p3w=0;var p3d=0;var p3l=0;var p3s=0;var p3a=0;var p3dif=0;var p3po=0;
+var ppl=[0,1,2];
+var pw=[0,1,2];
+var pd=[0,1,2];
+var pl=[0,1,2];
+var ps=[0,1,2];
+var pa=[0,1,2];
+var pdif=[0,1,2];
+var ppo=[0,1,2];
 
-
+function compare(first,second)
+{
+  if(first==second)
+  {
+    return "draw";
+  }
+  if(first<second)
+  {
+    return second;
+  }
+  else
+  {
+    return first;
+  }
+}
 
 var loader;
 
@@ -46,6 +67,8 @@ function focus_out(id1, id2, id3) {
       $("#" + id3 + ".card_back").css({ "background-color": "rgb(232 248 6 / 35%)" });
     } else {
       $("#" + id3 + ".card_back").css({ "background-color": "rgb(255 0 0 / 35%)" });
+
+      compare()
     }
   } else {
     $("#" + id3 + ".card_back").css({ "background-color": "rgb(10 20 34 / 35%)" });
