@@ -1,3 +1,15 @@
+//asign team
+var player1;
+var player2;
+var player3;
+
+var P1T1;
+var P1T2;
+var P2T1;
+var P2T2;
+var P3T1;
+var P3T2;
+
 var tpl = [0, 0, 0, 0, 0, 0];
 var tw = [0, 0, 0, 0, 0, 0];
 var td = [0, 0, 0, 0, 0, 0];
@@ -18,6 +30,15 @@ var ps = [0, 0, 0];
 var pa = [0, 0, 0];
 var pdif = [0, 0, 0];
 var ppo = [0, 0, 0];
+
+var kppl = [0, 0, 0];
+var kpw = [0, 0, 0];
+var kpd = [0, 0, 0];
+var kpl = [0, 0, 0];
+var kps = [0, 0, 0];
+var kpa = [0, 0, 0];
+var kpdif = [0, 0, 0];
+var kppo = [0, 0, 0];
 
 function compare(first, second) {
   if ($(first).val() == $(second).val()) {
@@ -58,145 +79,204 @@ function team(id) {
   var id_name = $(id).attr("id");
   return id_name.split("_")[0];
 }
-function draw(id1,id2){
+function draw(id1,id2,count){
   var goal1 = parseInt($(id1).val());
   var goal2 = parseInt($(id2).val());
   for(i=0;i<6;i++)
         {
-          console.log("1- "+i)
           if (team(id1).includes((i+1).toString())) {
-            tpl[i]=tpl[i]+1;
-            tw[i]=tw[i];
-            td[i]=td[i]+1;
-            tl[i]=tl[i];
-            ts[i]=parseInt(ts[i])+goal1;
-            ta[i]=parseInt(ta[i])+goal2;
-            tdif[i]=ts[i]-ta[i];
-            tpo[i]=tpo[i]+1;
-            var p;
-            if(i==0 || i==1)
+            if(count == 0)
             {
-              p=0;
+              kppl[p]=kppl[p]+1;
+              kpw[p]=kpw[p];
+              kpd[p]=kpd[p]+1;
+              kpl[p]=kpl[p];
+              kps[p]=parseInt(kps[p])+goal1;
+              kpa[p]=parseInt(kpa[p])+goal2;
+              kpdif[p]=kps[p]-kpa[p];
+              kppo[p]=kppo[p]+1;
             }
-            if(i==2 || i==3)
+            else
             {
-              p=1;
+              tpl[i]=tpl[i]+1;
+              tw[i]=tw[i];
+              td[i]=td[i]+1;
+              tl[i]=tl[i];
+              ts[i]=parseInt(ts[i])+goal1;
+              ta[i]=parseInt(ta[i])+goal2;
+              tdif[i]=ts[i]-ta[i];
+              tpo[i]=tpo[i]+1;
+              var p;
+              if(i==0 || i==1)
+              {
+                p=0;
+              }
+              if(i==2 || i==3)
+              {
+                p=1;
+              }
+              if(i==4 || i==5)
+              {
+                p=2;
+              }
+              ppl[p]=ppl[p]+1;
+              pw[p]=pw[p];
+              pd[p]=pd[p]+1;
+              pl[p]=pl[p];
+              ps[p]=parseInt(ps[p])+goal1;
+              pa[p]=parseInt(pa[p])+goal2;
+              pdif[p]=ps[p]-pa[p];
+              ppo[p]=ppo[p]+1;
             }
-            if(i==4 || i==5)
-            {
-              p=2;
-            }
-            ppl[p]=ppl[p]+1;
-            pw[p]=pw[p];
-            pd[p]=pd[p]+1;
-            pl[p]=pl[p];
-            ps[p]=parseInt(ps[p])+goal1;
-            pa[p]=parseInt(pa[p])+goal2;
-            pdif[p]=ps[p]-pa[p];
-            ppo[p]=ppo[p]+1;
+            
           }
           
           if (team(id2).includes((i+1).toString())) {
-            tpl[i]=tpl[i]+1;
-            tw[i]=tw[i];
-            td[i]=td[i]+1;
-            tl[i]=tl[i];
-            ts[i]=parseInt(ts[i])+goal2;
-            ta[i]=parseInt(ta[i])+goal1;
-            tdif[i]=ts[i]-ta[i];
-            tpo[i]=tpo[i]+1;
-            var p;
-            if(i==0 || i==1)
+            if(count == 0)
             {
-              p=0;
+              kppl[p]=kppl[p]+1;
+              kpw[p]=kpw[p];
+              kpd[p]=kpd[p]+1;
+              kpl[p]=kpl[p];
+              kps[p]=parseInt(kps[p])+goal2;
+              kpa[p]=parseInt(kpa[p])+goal1;
+              kpdif[p]=kps[p]-kpa[p];
+              kppo[p]=kppo[p]+1;
             }
-            if(i==2 || i==3)
+            else
             {
-              p=1;
+              tpl[i]=tpl[i]+1;
+              tw[i]=tw[i];
+              td[i]=td[i]+1;
+              tl[i]=tl[i];
+              ts[i]=parseInt(ts[i])+goal2;
+              ta[i]=parseInt(ta[i])+goal1;
+              tdif[i]=ts[i]-ta[i];
+              tpo[i]=tpo[i]+1;
+              var p;
+              if(i==0 || i==1)
+              {
+                p=0;
+              }
+              if(i==2 || i==3)
+              {
+                p=1;
+              }
+              if(i==4 || i==5)
+              {
+                p=2;
+              }
+              ppl[p]=ppl[p]+1;
+              pw[p]=pw[p];
+              pd[p]=pd[p]+1;
+              pl[p]=pl[p];
+              ps[p]=parseInt(ps[p])+goal2;
+              pa[p]=parseInt(pa[p])+goal1;
+              pdif[p]=pa[p]-pa[p];
+              ppo[p]=ppo[p]+1;
             }
-            if(i==4 || i==5)
-            {
-              p=2;
-            }
-            ppl[p]=ppl[p]+1;
-            pw[p]=pw[p];
-            pd[p]=pd[p]+1;
-            pl[p]=pl[p];
-            ps[p]=parseInt(ps[p])+goal2;
-            pa[p]=parseInt(pa[p])+goal1;
-            pdif[p]=pa[p]-pa[p];
-            ppo[p]=ppo[p]+1;
+            
           }
         }
 }
-function win(id1,id2){
+function win(id1,id2,count){
   var goal1 = parseInt($(id1).val());
   var goal2 = parseInt($(id2).val());
   for(i=0;i<6;i++)
         {
           if (team(id1).includes((i+1).toString())) {
-            tpl[i]=tpl[i]+1;
-            tw[i]=tw[i]+1;
-            td[i]=td[i];
-            tl[i]=tl[i];
-            ts[i]=parseInt(ts[i])+goal1;
-            ta[i]=parseInt(ta[i])+goal2;
-            tdif[i]=ts[i]-ta[i];
-            tpo[i]=tpo[i]+3;
+            if(count == 0)
+            {
+              kppl[p]=kppl[p]+1;
+              kpw[p]=kpw[p]+1;
+              kpd[p]=kpd[p];
+              kpl[p]=kpl[p];
+              kps[p]=parseInt(kps[p])+goal1;
+              kpa[p]=parseInt(kpa[p])+goal2;
+              kpdif[p]=kps[p]-kpa[p];
+              kppo[p]=kppo[p]+3;
+            }
+            else
+            {
+              tpl[i]=tpl[i]+1;
+              tw[i]=tw[i]+1;
+              td[i]=td[i];
+              tl[i]=tl[i];
+              ts[i]=parseInt(ts[i])+goal1;
+              ta[i]=parseInt(ta[i])+goal2;
+              tdif[i]=ts[i]-ta[i];
+              tpo[i]=tpo[i]+3;
 
-            var p;
-            if(i==0 || i==1)
-            {
-              p=0;
+              var p;
+              if(i==0 || i==1)
+              {
+                p=0;
+              }
+              if(i==2 || i==3)
+              {
+                p=1;
+              }
+              if(i==4 || i==5)
+              {
+                p=2;
+              }
+              ppl[p]=ppl[p]+1;
+              pw[p]=pw[p]+1;
+              pd[p]=pd[p];
+              pl[p]=pl[p];
+              ps[p]=parseInt(ps[p])+goal1;
+              pa[p]=parseInt(pa[p])+goal2;
+              pdif[p]=ps[p]-pa[p];
+              ppo[p]=ppo[p]+3;
             }
-            if(i==2 || i==3)
-            {
-              p=1;
-            }
-            if(i==4 || i==5)
-            {
-              p=2;
-            }
-            ppl[p]=ppl[p]+1;
-            pw[p]=pw[p]+1;
-            pd[p]=pd[p];
-            pl[p]=pl[p];
-            ps[p]=parseInt(ps[p])+goal1;
-            pa[p]=parseInt(pa[p])+goal2;
-            pdif[p]=ps[p]-pa[p];
-            ppo[p]=ppo[p]+3;
+            
           }
           if (team(id2).includes((i+1).toString())) {
-            tpl[i]=tpl[i]+1;
-            tw[i]=tw[i];
-            td[i]=td[i];
-            tl[i]=tl[i]+1;
-            ts[i]=parseInt(ts[i])+goal2;
-            ta[i]=parseInt(ta[i])+goal1;
-            tdif[i]=ts[i]-ta[i];
-            tpo[i]=tpo[i];
+            if(count == 0)
+            {
+              kppl[p]=kppl[p]+1;
+              kpw[p]=kpw[p];
+              kpd[p]=kpd[p];
+              kpl[p]=kpl[p]+1;
+              kps[p]=parseInt(kps[p])+goal2;
+              kpa[p]=parseInt(kpa[p])+goal1;
+              kpdif[p]=kps[p]-kpa[p];
+              kppo[p]=kppo[p];
+            }
+            else
+            {
+              tpl[i]=tpl[i]+1;
+              tw[i]=tw[i];
+              td[i]=td[i];
+              tl[i]=tl[i]+1;
+              ts[i]=parseInt(ts[i])+goal2;
+              ta[i]=parseInt(ta[i])+goal1;
+              tdif[i]=ts[i]-ta[i];
+              tpo[i]=tpo[i];
 
-            var p;
-            if(i==0 || i==1)
-            {
-              p=0;
+              var p;
+              if(i==0 || i==1)
+              {
+                p=0;
+              }
+              if(i==2 || i==3)
+              {
+                p=1;
+              }
+              if(i==4 || i==5)
+              {
+                p=2;
+              }
+              ppl[p]=ppl[p]+1;
+              pw[p]=pw[p];
+              pd[p]=pd[p];
+              pl[p]=pl[p]+1;
+              ps[p]=parseInt(ps[p])+goal2;
+              pa[p]=parseInt(pa[p])+goal1;
+              pdif[p]=ps[p]-pa[p];
+              ppo[p]=ppo[p];
             }
-            if(i==2 || i==3)
-            {
-              p=1;
-            }
-            if(i==4 || i==5)
-            {
-              p=2;
-            }
-            ppl[p]=ppl[p]+1;
-            pw[p]=pw[p];
-            pd[p]=pd[p];
-            pl[p]=pl[p]+1;
-            ps[p]=parseInt(ps[p])+goal2;
-            pa[p]=parseInt(pa[p])+goal1;
-            pdif[p]=ps[p]-pa[p];
-            ppo[p]=ppo[p];
+            
           }
         }
 }
@@ -205,13 +285,13 @@ function focus_out(id1, id2, id3) {
   if ($(id1).val() != "" && $(id2).val() != "") {
     if (id3.includes("qc")) {
       if ($(id1).val() == $(id2).val()) {
-        draw(id1,id2);
+        draw(id1,id2,1);
       }
       else if ($(id1).val() >= $(id2).val()) {
-        win(id1,id2);
+        win(id1,id2,1);
       }
       else{
-        win(id2,id1);
+        win(id2,id1,1);
       }
       // console.log(ppl[1]);
       player_refresh();
@@ -221,6 +301,17 @@ function focus_out(id1, id2, id3) {
         "background-color": "rgb(49 247 0 / 35%)",
       });
     } else if (id3.includes("kc")) {
+      if ($(id1).val() == $(id2).val()) {
+        draw(id1,id2,0);
+      }
+      else if ($(id1).val() >= $(id2).val()) {
+        win(id1,id2,0);
+      }
+      else{
+        win(id2,id1,0);
+      }
+      knockout_refresh();
+      knockout = knockout + 1;
       $("#" + id3 + ".card_back").css({
         "background-color": "rgb(232 248 6 / 35%)",
       });
@@ -228,8 +319,6 @@ function focus_out(id1, id2, id3) {
       $("#" + id3 + ".card_back").css({
         "background-color": "rgb(255 0 0 / 35%)",
       });
-
-      console.log(compare(id1, id2));
     }
     $(id1).prop("disabled", true);
     $(id2).prop("disabled", true);
@@ -242,7 +331,113 @@ function focus_out(id1, id2, id3) {
   }
   if(qualifier >= 12)
   {
-    
+    if(tpo[0]>tpo[1])
+    {
+      $("#ktp_1_1").attr("src", a[P1T1][0]);
+      $("#ktp_1_2").attr("src", a[P1T1][0]);
+      $("#kp1").text(P1T1 +" ("+player1+")");
+    }
+    else if(tpo[0]<tpo[1])
+    {
+      $("#ktp_1_1").attr("src", a[P1T2][0]);
+      $("#ktp_1_2").attr("src", a[P1T2][0]);
+      $("#kp1").text(P1T2 +" ("+player1+")");
+    }
+    else
+    {
+      if(tdif[0]>tdif[1])
+      {
+        $("#ktp_1_1").attr("src", a[P1T1][0]);
+        $("#ktp_1_2").attr("src", a[P1T1][0]);
+        $("#kp1").text(P1T1 +" ("+player1+")");
+      }
+      else if(tdif[0]<tdif[1])
+      {
+        $("#ktp_1_1").attr("src", a[P1T2][0]);
+        $("#ktp_1_2").attr("src", a[P1T2][0]);
+        $("#kp1").text(P1T2 +" ("+player1+")");
+      }
+      else{alert("Aita kono kotha ato mil kmne hoy?");}
+    }
+
+    if(tpo[2]>tpo[3])
+    {
+      $("#ktp_2_1").attr("src", a[P2T1][0]);
+      $("#ktp_2_2").attr("src", a[P2T1][0]);
+      $("#kp2").text(P2T1 +" ("+player2+")");
+    }
+    else if(tpo[2]<tpo[3])
+    {
+      $("#ktp_2_1").attr("src", a[P2T2][0]);
+      $("#ktp_2_2").attr("src", a[P2T2][0]);
+      $("#kp2").text(P2T2 +" ("+player2+")");
+    }
+    else
+    {
+      if(tdif[2]>tdif[3])
+      {
+        $("#ktp_2_1").attr("src", a[P2T1][0]);
+        $("#ktp_2_2").attr("src", a[P2T1][0]);
+        $("#kp2").text(P2T1 +" ("+player2+")");
+      }
+      else if(tdif[2]<tdif[3])
+      {
+        $("#ktp_2_1").attr("src", a[P2T2][0]);
+        $("#ktp_2_2").attr("src", a[P2T2][0]);
+        $("#kp2").text(P2T2 +" ("+player2+")");
+      }
+      else{alert("Aita kono kotha ato mil kmne hoy?");}
+    }
+
+    if(tpo[4]>tpo[5])
+    {
+      $("#ktp_3_1").attr("src", a[P3T1][0]);
+      $("#ktp_3_2").attr("src", a[P3T1][0]);
+      $("#kp3").text(P3T1 +" ("+player3+")");
+    }
+    else if(tpo[4]<tpo[5])
+    {
+      $("#ktp_3_1").attr("src", a[P3T2][0]);
+      $("#ktp_3_2").attr("src", a[P3T2][0]);
+      $("#kp3").text(P3T2 +" ("+player3+")");
+    }
+    else
+    {
+      if(tdif[4]>tdif[5])
+      {
+        $("#ktp_3_1").attr("src", a[P3T1][0]);
+        $("#ktp_3_2").attr("src", a[P3T1][0]);
+        $("#kp3").text(P3T1 +" ("+player3+")");
+      }
+      else if(tdif[4]<tdif[5])
+      {
+        $("#ktp_3_1").attr("src", a[P3T2][0]);
+        $("#ktp_3_2").attr("src", a[P3T2][0]);
+        $("#kp3").text(P3T2 +" ("+player3+")");
+      }
+      else{alert("Aita kono kotha ato mil kmne hoy?");}
+    }
+    for (i = 1; i <= 2; i++) {
+      $("#ktpn_1_" + i + "").text(player1);
+    }
+    for (i = 1; i <= 2; i++) {
+      $("#ktpn_2_" + i + "").text(player2);
+    }
+    for (i = 1; i <= 2; i++) {
+      $("#ktpn_3_" + i + "").text(player3);
+    }
+    knockout_refresh();
+  }
+  if(knockout >=3)
+  {
+    if(kppo[0]>kppo[1] && kppo[0]>kppo[2])
+    {
+
+    }
+    else if(kppo[0]<kppo[1] && kppo[0]<kppo[2])
+    {
+      
+    }
   }
 }
 function value_return(variable) {
@@ -320,31 +515,45 @@ function player_refresh()
     $("#po" + i + "").text(ppo[i - 1]);
   }
 }
+function knockout_refresh()
+{
+  for (i = 1; i <= 3; i++) {
+    $("#kpl" + i + "").text(kppl[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#kw" + i + "").text(kpw[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#kd" + i + "").text(kpd[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#kl" + i + "").text(kpl[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#ks" + i + "").text(kps[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#ka" + i + "").text(kpa[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#kdif" + i + "").text(kpdif[i - 1]);
+  }
+  for (i = 1; i <= 3; i++) {
+    $("#kpo" + i + "").text(kppo[i - 1]);
+  }
+}
 // initilize jqery data table //
 $(document).ready(function () {
-  console.log(a["real"][0]);
-  //asign team
-  var player1;
-  var player1;
-  var player1;
-
-  var P1T1;
-  var P1T2;
-  var P2T1;
-  var P2T2;
-  var P3T1;
-  var P3T2;
-
-  $("#table_1").DataTable({
-    paging: false,
-    bFilter: false,
-    bInfo: false,
-  });
-  $("#table_2").DataTable({
-    paging: false,
-    bFilter: false,
-    bInfo: false,
-  });
+  
+  for(i=1;i<=3;i++)
+  {
+    $("#table_"+i+"").DataTable({
+      paging: false,
+      bFilter: false,
+      bInfo: false,
+    });
+  }
+  
 
   $("#number_number").show();
   // $("#player_name").hide();
@@ -353,6 +562,8 @@ $(document).ready(function () {
   // $("#page1").hide();
   // $("#page2").hide();
   // $("#page3").hide();
+  // $("#page4").hide();
+  // $("#page5").hide();
 
   $("#score_table_btn").click(function () {
     $("#page1").hide();
@@ -432,17 +643,6 @@ $(document).ready(function () {
         P3T1 = $("#in8").val();
         P3T2 = $("#in11").val();
       }
-
-      console.log("player1= " + player1);
-      console.log("player2= " + player2);
-      console.log("player3= " + player3);
-
-      console.log("T1= " + P1T1);
-      console.log("T2= " + P1T2);
-      console.log("T3= " + P2T1);
-      console.log("T4= " + P2T2);
-      console.log("T5= " + P3T1);
-      console.log("T6= " + P3T2);
 
       $("#tp_1_1").attr("src", a[P1T1][0]);
       $("#tp_1_2").attr("src", a[P1T1][0]);

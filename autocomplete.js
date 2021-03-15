@@ -1,11 +1,13 @@
 $( function() {
     var availableTags = [
-      "real",
-      "barca",
-      "juv",
-      "bryan",
-      "manc",
-      "paris"
+      "Manchester City",
+      "Liverpool",
+      "Real Madrid",
+      "FC Bayern München",
+      "FC Barcelona",
+      "Juventus",
+      "Paris Saint-Germain",
+      "Juventus",
     ];
     $( "#in6" ).autocomplete({
       source: availableTags
@@ -28,9 +30,29 @@ $( function() {
   } );
 
   var a = [];
-  a['real'] = ['/img/teams_logo/243.webp']; 
-  a['barca'] = ['/img/teams_logo/241.webp'];
-  a['juv'] = ['/img/teams_logo/45.webp'];
-  a['bryan'] = ['/img/teams_logo/21.webp'];
-  a['manc'] = ['/img/teams_logo/10.webp'];
-  a['paris'] = ['/img/teams_logo/73.webp'];
+  a['Manchester City'] = ['/img/teams_logo/10.webp']; 
+  a['Liverpool'] = ['/img/teams_logo/9.webp'];
+  a['Real Madrid'] = ['/img/teams_logo/243.webp'];
+  a['FC Bayern München'] = ['/img/teams_logo/21.webp'];
+  a['FC Barcelona'] = ['/img/teams_logo/241.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Paris Saint-Germain'] = ['/img/teams_logo/73.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
+  a['Juventus'] = ['/img/teams_logo/45.webp'];
