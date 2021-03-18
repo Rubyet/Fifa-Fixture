@@ -56,3 +56,6 @@ $( function() {
   a['Juventus'] = ['/img/teams_logo/45.webp'];
   a['Juventus'] = ['/img/teams_logo/45.webp'];
   a['Juventus'] = ['/img/teams_logo/45.webp'];
+
+
+  

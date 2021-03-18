@@ -1,3 +1,4 @@
+alert("<a href=\"google.com\">Google</a>");
 //asign team
 var player1;
 var player2;
@@ -87,14 +88,14 @@ function draw(id1,id2,count){
           if (team(id1).includes((i+1).toString())) {
             if(count == 0)
             {
-              kppl[p]=kppl[p]+1;
-              kpw[p]=kpw[p];
-              kpd[p]=kpd[p]+1;
-              kpl[p]=kpl[p];
-              kps[p]=parseInt(kps[p])+goal1;
-              kpa[p]=parseInt(kpa[p])+goal2;
-              kpdif[p]=kps[p]-kpa[p];
-              kppo[p]=kppo[p]+1;
+              kppl[i]=kppl[i]+1;
+              kpw[i]=kpw[i];
+              kpd[i]=kpd[i]+1;
+              kpl[i]=kpl[i];
+              kps[i]=parseInt(kps[i])+goal1;
+              kpa[i]=parseInt(kpa[i])+goal2;
+              kpdif[i]=kps[i]-kpa[i];
+              kppo[i]=kppo[i]+1;
             }
             else
             {
@@ -134,14 +135,14 @@ function draw(id1,id2,count){
           if (team(id2).includes((i+1).toString())) {
             if(count == 0)
             {
-              kppl[p]=kppl[p]+1;
-              kpw[p]=kpw[p];
-              kpd[p]=kpd[p]+1;
-              kpl[p]=kpl[p];
-              kps[p]=parseInt(kps[p])+goal2;
-              kpa[p]=parseInt(kpa[p])+goal1;
-              kpdif[p]=kps[p]-kpa[p];
-              kppo[p]=kppo[p]+1;
+              kppl[i]=kppl[i]+1;
+              kpw[i]=kpw[i];
+              kpd[i]=kpd[i]+1;
+              kpl[i]=kpl[i];
+              kps[i]=parseInt(kps[i])+goal2;
+              kpa[i]=parseInt(kpa[i])+goal1;
+              kpdif[i]=kps[i]-kpa[i];
+              kppo[i]=kppo[i]+1;
             }
             else
             {
@@ -187,17 +188,19 @@ function win(id1,id2,count){
           if (team(id1).includes((i+1).toString())) {
             if(count == 0)
             {
-              kppl[p]=kppl[p]+1;
-              kpw[p]=kpw[p]+1;
-              kpd[p]=kpd[p];
-              kpl[p]=kpl[p];
-              kps[p]=parseInt(kps[p])+goal1;
-              kpa[p]=parseInt(kpa[p])+goal2;
-              kpdif[p]=kps[p]-kpa[p];
-              kppo[p]=kppo[p]+3;
+              console.log("draw");
+              kppl[i]=kppl[i]+1;
+              kpw[i]=kpw[i]+1;
+              kpd[i]=kpd[i];
+              kpl[i]=kpl[i];
+              kps[i]=parseInt(kps[i])+goal1;
+              kpa[i]=parseInt(kpa[i])+goal2;
+              kpdif[i]=kps[i]-kpa[i];
+              kppo[i]=kppo[i]+3;
             }
             else
             {
+              console.log("draw");
               tpl[i]=tpl[i]+1;
               tw[i]=tw[i]+1;
               td[i]=td[i];
@@ -234,14 +237,14 @@ function win(id1,id2,count){
           if (team(id2).includes((i+1).toString())) {
             if(count == 0)
             {
-              kppl[p]=kppl[p]+1;
-              kpw[p]=kpw[p];
-              kpd[p]=kpd[p];
-              kpl[p]=kpl[p]+1;
-              kps[p]=parseInt(kps[p])+goal2;
-              kpa[p]=parseInt(kpa[p])+goal1;
-              kpdif[p]=kps[p]-kpa[p];
-              kppo[p]=kppo[p];
+              kppl[i]=kppl[i]+1;
+              kpw[i]=kpw[i];
+              kpd[i]=kpd[i];
+              kpl[i]=kpl[i]+1;
+              kps[i]=parseInt(kps[i])+goal2;
+              kpa[i]=parseInt(kpa[i])+goal1;
+              kpdif[i]=kps[i]-kpa[i];
+              kppo[i]=kppo[i];
             }
             else
             {
@@ -316,6 +319,7 @@ function focus_out(id1, id2, id3) {
         "background-color": "rgb(232 248 6 / 35%)",
       });
     } else {
+      
       $("#" + id3 + ".card_back").css({
         "background-color": "rgb(255 0 0 / 35%)",
       });
@@ -430,13 +434,55 @@ function focus_out(id1, id2, id3) {
   }
   if(knockout >=3)
   {
+    console.log("it ca,e here");
+    console.log(kppo[0]);
+    console.log(kppo[1]);
+    console.log(kppo[2]);
     if(kppo[0]>kppo[1] && kppo[0]>kppo[2])
     {
-
-    }
-    else if(kppo[0]<kppo[1] && kppo[0]<kppo[2])
-    {
       
+      $("#ftp_1").attr("src", $("#ktp_1_1").attr('src'));
+      $("#ftpn_1").text(player1);
+      if(kppo[1]>kppo[2])
+      {
+        $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+        $("#ftpn_2").text(player2);
+      }
+      else
+      {
+        $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+        $("#ftpn_2").text(player3);
+      }
+    }
+    else if(kppo[1]>kppo[0] && kppo[1]>kppo[2])
+    {
+      $("#ftp_1").attr("src", $("#ktp_2_1").attr('src'));
+      $("#ftpn_1").text(player2);
+      if(kppo[0]>kppo[2])
+      {
+        $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+        $("#ftpn_2").text(player1);
+      }
+      else
+      {
+        $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+        $("#ftpn_2").text(player3);
+      }
+    }
+    else if(kppo[2]>kppo[0] && kppo[2]>kppo[1])
+    {
+      $("#ftp_1").attr("src", $("#ktp_3_1").attr('src'));
+      $("#ftpn_1").text(player3);
+      if(kppo[0]>kppo[1])
+      {
+        $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+        $("#ftpn_2").text(player1);
+      }
+      else
+      {
+        $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+        $("#ftpn_2").text(player2);
+      }
     }
   }
 }
