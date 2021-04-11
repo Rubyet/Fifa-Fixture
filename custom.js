@@ -185,7 +185,6 @@ function win(id1,id2,count){
           if (team(id1).includes((i+1).toString())) {
             if(count == 0)
             {
-              console.log("draw");
               kppl[i]=kppl[i]+1;
               kpw[i]=kpw[i]+1;
               kpd[i]=kpd[i];
@@ -197,7 +196,6 @@ function win(id1,id2,count){
             }
             else
             {
-              console.log("draw");
               tpl[i]=tpl[i]+1;
               tw[i]=tw[i]+1;
               td[i]=td[i];
@@ -293,7 +291,6 @@ function focus_out(id1, id2, id3) {
       else{
         win(id2,id1,1);
       }
-      // console.log(ppl[1]);
       player_refresh();
       team_refresh();
       qualifier = qualifier + 1;
@@ -781,7 +778,6 @@ $(document).ready(function () {
           var r = Math.floor(Math.random() * 6) + 1;
           if (arr.indexOf(r) === -1) arr.push(r);
         }
-        console.log(value_return(arr["real"]));
         P1T1 = $("#" + value_return(arr[0])).val();
         P1T2 = $("#" + value_return(arr[1])).val();
         P2T1 = $("#" + value_return(arr[2])).val();
