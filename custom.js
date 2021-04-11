@@ -70,9 +70,7 @@ function displayContent() {
 }
 document.addEventListener("DOMContentLoaded", function () {
   loader = document.getElementById("loader");
-  setTimeout(function () {
     loadNow(1);
-  }, 200);
 });
 
 function team(id) {
