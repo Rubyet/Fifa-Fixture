@@ -32,12 +32,19 @@
                 <div class="input">
                     <input required id="in1" type="number">
                 </div>
+                <div class="text">
+                    <span class="required">***Currently only 3 players allowed </span>
+                </div>
+                
                 <div><a href="#" class="myButton" id="player_number_btn">Next</a></div>
             </div>
             <div class="sub_title" id="team_number">
                 <h3>Number of Teams</h3>
                 <div class="input">
                     <input required id="in2" type="number">
+                </div>
+                <div class="text">
+                    <span class="required">***Currently only 6 teams allowed </span>
                 </div>
                 <div><a href="#" class="myButton" id="team_number_btn">Next</a></div>
             </div>
@@ -628,11 +635,37 @@
                         </tbody>
                     </table>
                 </div>
-            <a href="#" class="myButton" id="fixture_table_btn">Score Table</a>
         </div>
+        <a href="#" class="myButton" id="fixture_table_btn">Fixture Table</a>
         
     </div>
+    <!--  -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content" id="modal">
+            <div class="modal-body">
+                <div class="modal_content">
+                    <div class="congrats">
+                        <h1>Congratulations!</h1>
+                    </div>
+                    <div class="final_image">
+                        <img src="./img/no_team.gif" alt="Barca" id="Final_image">
+                    </div>
+                    <div class="name">
+                        <span class="name1" id="Final">TBA</span>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        </div>
+    </div>
 
 
     <!-- JS CDN -->
@@ -645,6 +678,11 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+
+    <script src="confetti.js"></script>
+    <script src="congrats.js"></script>
     <!-- custom JS -->
     <script src="custom.js"></script>
 

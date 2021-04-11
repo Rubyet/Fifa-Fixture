@@ -98,7 +98,7 @@ input[type="number"] {
   font-size: 60pt;
 }
 
-#page1 h1,#page2 h1,#page3 h1 {
+#page1 h1,#page2 h1,#page3 h1,#page4 h1,#page5 h1 {
   text-shadow: 2px 2px #2724a1cb;
   position: relative;
   color: #fff;
@@ -113,7 +113,7 @@ input[type="number"] {
   white-space: nowrap;
   padding-bottom: 13px;
 }
-#page1 h1:before,#page2 h1:before,#page3 h1:before {
+#page1 h1:before,#page2 h1:before,#page3 h1:before,#page4 h1:before,#page5 h1:before{
   background-color: #fdf908;
   content: "";
   display: block;
@@ -121,7 +121,7 @@ input[type="number"] {
   width: 75px;
   margin-bottom: 5px;
 }
-#page1 h1:after,#page2 h1:after,#page3 h1:after {
+#page1 h1:after,#page2 h1:after,#page3 h1:after,#page4 h1:after,#page5 h1:after {
   background-color: #2eff13;
   content: "";
   display: block;
@@ -194,6 +194,9 @@ input[type="number"] {
   
 }
 
+#pt1{
+  width: 400px;
+}
 
 .main-heading{
   margin-top: 20px;
@@ -254,12 +257,12 @@ input[type="number"] {
   padding: 10px;
 }
 
-#score_table_btn{
-  margin-top: 70px;
+#score_table_btn,#fixture_table_btn{
   color: #6d6d6d;
-}
-#fixture_table_btn{
-  color: #6d6d6d;
+  position: fixed;
+  top: 35px;
+  left: 46px;
+    
 }
 h3{
   text-shadow: 1px 1px 4px;
@@ -295,4 +298,65 @@ h3{
     /* padding-top: 20px; */
     margin-top: 20px;
   }
+  #page4{
+    text-align: center;
+  }
+  #page3{
+    margin-top: 50px;
+  }
+
+  #modal{
+    height: 400px;
+    width: 630px;
+    border-radius: 50px;
+    background: antiquewhite;
+  }
+
+  .modal_content{
+    text-align: center;
+  }
+  .modal_content img{
+    margin-top: 70px;
+    width:30%;  
+  }
+  #Final{
+    font-size: 70px;
+    box-shadow: #000000 ;
+  }
+
+
   
+  .modal_content .congrats {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .modal_content h1 {
+    transform-origin: 50% 50%;
+    font-size: 50px;
+    font-family: 'Sigmar One', cursive;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .modal_content .blob {
+    height: 50px;
+    width: 50px;
+    color: #ffcc00;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 1;
+    font-size: 30px;
+    display: none;	
+  }
+
+  .text{
+    color: rgb(177, 17, 25);
+    padding: 10px;
+  }

@@ -1,4 +1,3 @@
-alert("<a href=\"google.com\">Google</a>");
 //asign team
 var player1;
 var player2;
@@ -319,7 +318,20 @@ function focus_out(id1, id2, id3) {
         "background-color": "rgb(232 248 6 / 35%)",
       });
     } else {
+      if ($(id1).val() >= $(id2).val())
+      {
+        $("#Final_image").attr("src", $("#ftp_1").attr('src'));
+        $("#Final").text($("#ftpn_1").text());
+      }
+      else
+      {
+        $("#Final_image").attr("src", $("#ftp_2").attr('src'));
+        $("#Final").text($("#ftpn_2").text());
+      }
       
+
+      confetti.start();
+      $("#myModal").modal();
       $("#" + id3 + ".card_back").css({
         "background-color": "rgb(255 0 0 / 35%)",
       });
@@ -434,10 +446,6 @@ function focus_out(id1, id2, id3) {
   }
   if(knockout >=3)
   {
-    console.log("it ca,e here");
-    console.log(kppo[0]);
-    console.log(kppo[1]);
-    console.log(kppo[2]);
     if(kppo[0]>kppo[1] && kppo[0]>kppo[2])
     {
       
@@ -482,6 +490,100 @@ function focus_out(id1, id2, id3) {
       {
         $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
         $("#ftpn_2").text(player2);
+      }
+    }
+    else{
+      if(kpdif[0]>kpdif[1] && kpdif[0]>kpdif[2])
+      {
+        $("#ftp_1").attr("src", $("#ktp_1_1").attr('src'));
+        $("#ftpn_1").text(player1);
+        if(kpdif[1]>kpdif[2])
+        {
+          $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+          $("#ftpn_2").text(player2);
+        }
+        else
+        {
+          $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+          $("#ftpn_2").text(player3);
+        }
+      }
+      else if(kpdif[1]>kpdif[0] && kpdif[1]>kpdif[2])
+      {
+        $("#ftp_1").attr("src", $("#ktp_2_1").attr('src'));
+        $("#ftpn_1").text(player2);
+        if(kpdif[0]>kpdif[2])
+        {
+          $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+          $("#ftpn_2").text(player1);
+        }
+        else
+        {
+          $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+          $("#ftpn_2").text(player3);
+        }
+      }
+      else if(kpdif[2]>kpdif[0] && kpdif[2]>kpdif[1])
+      {
+        $("#ftp_1").attr("src", $("#ktp_3_1").attr('src'));
+        $("#ftpn_1").text(player3);
+        if(kpdif[0]>kpdif[1])
+        {
+          $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+          $("#ftpn_2").text(player1);
+        }
+        else
+        {
+          $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+          $("#ftpn_2").text(player2);
+        }
+      }
+      else{
+        if(kps[0]>kps[1] && kps[0]>kps[2])
+        {
+          $("#ftp_1").attr("src", $("#ktp_1_1").attr('src'));
+          $("#ftpn_1").text(player1);
+          if(kps[1]>kps[2])
+          {
+            $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+            $("#ftpn_2").text(player2);
+          }
+          else
+          {
+            $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+            $("#ftpn_2").text(player3);
+          }
+        }
+        else if(kps[1]>kps[0] && kps[1]>kps[2])
+        {
+          $("#ftp_1").attr("src", $("#ktp_2_1").attr('src'));
+          $("#ftpn_1").text(player2);
+          if(kps[0]>kps[2])
+          {
+            $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+            $("#ftpn_2").text(player1);
+          }
+          else
+          {
+            $("#ftp_2").attr("src", $("#ktp_3_1").attr('src'));
+            $("#ftpn_2").text(player3);
+          }
+        }
+        else if(kps[2]>kps[0] && kps[2]>kps[1])
+        {
+          $("#ftp_1").attr("src", $("#ktp_3_1").attr('src'));
+          $("#ftpn_1").text(player3);
+          if(kps[0]>kps[1])
+          {
+            $("#ftp_2").attr("src", $("#ktp_1_1").attr('src'));
+            $("#ftpn_2").text(player1);
+          }
+          else
+          {
+            $("#ftp_2").attr("src", $("#ktp_2_1").attr('src'));
+            $("#ftpn_2").text(player2);
+          }
+        }
       }
     }
   }
@@ -602,25 +704,32 @@ $(document).ready(function () {
   
 
   $("#number_number").show();
-  // $("#player_name").hide();
-  // $("#team_name").hide();
-  // $("#team_number").hide();
-  // $("#page1").hide();
-  // $("#page2").hide();
-  // $("#page3").hide();
-  // $("#page4").hide();
-  // $("#page5").hide();
+  $("#player_name").hide();
+  $("#team_name").hide();
+  $("#team_number").hide();
+  $("#page1").hide();
+  $("#page2").hide();
+  $("#page3").hide();
+  $("#page4").hide();
+  $("#page5").hide();
+  $("#fixture_table_btn").hide();
 
   $("#score_table_btn").click(function () {
     $("#page1").hide();
-    $("#page2").show();
+
     $("#page3").show();
+    $("#page4").show();
+    $("#page5").show();
+    $("#fixture_table_btn").show();
     $("body").css("background-image", "url('img/Background/bg2.png')");
   });
+
   $("#fixture_table_btn").click(function () {
     $("#page1").show();
-    $("#page2").hide();
     $("#page3").hide();
+    $("#page4").hide();
+    $("#page5").hide();
+    $("#fixture_table_btn").hide();
     $("body").css(
       "background-image",
       "url('img/Background/Football-Stadium-background.jpg')"
@@ -758,3 +867,5 @@ $(document).ready(function () {
     }
   });
 });
+
+
