@@ -352,10 +352,10 @@ a['Benevento'] = ['/img/teams_logo/112026.webp'];
 a['FC København'] = ['/img/teams_logo/819.webp'];
 a['RSC Anderlecht'] = ['/img/teams_logo/229.webp'];
 a['tttttt'] = ['/img/teams_logo/ppppp'];
-a['Spain'] = ['/img/teams_logo/ppppp'];
-a['Germany'] = ['/img/teams_logo/ppppp'];
-a['Brazil'] = ['/img/teams_logo/ppppp'];
-a['France'] = ['/img/teams_logo/ppppp'];
-a['Argentina'] = ['/img/teams_logo/ppppp'];
-a['Belgium'] = ['/img/teams_logo/ppppp'];
+a['Spain'] = ['/img/teams_logo/Spain.webp'];
+a['Germany'] = ['/img/teams_logo/Germany.webp'];
+a['Brazil'] = ['/img/teams_logo/Brazil.webp'];
+a['France'] = ['/img/teams_logo/France.webp'];
+a['Argentina'] = ['/img/teams_logo/Argentina.webp'];
+a['Belgium'] = ['/img/teams_logo/Belgium.webp'];
 
